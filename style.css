@@ -49,15 +49,98 @@ table {
 * {
 	box-sizing: border-box;
 }
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+body {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-areas: 
+	"header header header"
+	". . ."
+	". google_logo ."
+	". form . "
+	". . ."
+	". . ."
+	". . ."
+	"footer footer footer"
+		;
+}
+li {
 	
+}
+header {
+	grid-area: header;
+	margin-top: 10px;
+}
+footer {
+		grid-area: footer;
+		margin-bottom: 10px;
+		align-self: end;
+	}
+.button {
+		display: block;
+		background-color: white;
+		color: black;
+		border: none;
+	}
+#google_logo {
+	grid-area: google_logo;
+	align-self: center;
+}
+#form {
+	grid-area: form;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+#top_list {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(auto-fill, 5%);
+}
+#searchbar {
+	width: 600px;
+}
+#google_logo {
+	margin: 0 auto;
+}
+#account {
+	grid-column: 20 /21;
+}
+#apps {
+	grid-column: 19/20;
+}
+#images {
+	grid-column: 18/19;
+}
+#gmail {
+	grid-column: 17/18;
+}
+#bottomlist {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(auto-fill, 5%);
+	
+	
+}
+#settings {
+	grid-column: 19/20;
+}
+#terms {
+	grid-column: 18/19;
+}
+#privacy {
+	grid-column: 17/18;
+}
+#carbon {
+	grid-column: 9/13;
 
 }
-.button {
-	display: block;
-
+#business {
+	grid-column: 3/4;
+}
+#how {
+	grid-column: 5/8;
+	
 }
