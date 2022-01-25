@@ -66,11 +66,13 @@ body {
 		;
 }
 li {
+	font-size: 12px;
 	
 }
 header {
 	grid-area: header;
 	margin-top: 10px;
+	color: rgb(48, 48, 48);
 }
 footer {
 		grid-area: footer;
@@ -82,7 +84,12 @@ footer {
 		background-color: white;
 		color: black;
 		border: none;
+		font-size: 14px;
+		color: rgb(10, 9, 9);
 	}
+.button:hover {
+	border: 1px solid rgb(212, 212, 212);
+}
 #google_logo {
 	grid-area: google_logo;
 	align-self: center;
@@ -98,9 +105,11 @@ footer {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: repeat(auto-fill, 5%);
+	align-items: center; 
 }
 #searchbar {
 	width: 600px;
+	height: 50px;
 }
 #google_logo {
 	margin: 0 auto;
@@ -110,6 +119,11 @@ footer {
 }
 #apps {
 	grid-column: 19/20;
+	
+}
+#appimg {
+	height: 30px;
+	width: 30px;
 }
 #images {
 	grid-column: 18/19;
@@ -121,11 +135,18 @@ footer {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: repeat(auto-fill, 5%);
+	border-top: rgb(212, 205, 205) 1px solid;
+	padding-top: 5px;
+	color: grey;
+	align-items: center;
 	
-	
+}
+li:hover {
+	text-decoration: underline;
 }
 #settings {
 	grid-column: 19/20;
+	
 }
 #terms {
 	grid-column: 18/19;
@@ -143,4 +164,14 @@ footer {
 #how {
 	grid-column: 5/8;
 	
+}
+#about {
+	padding-left: 10px;
+	
+}
+#ad {
+	padding-left: 10px;
+}
+#leaf {
+	padding-right: 5px;
 }
